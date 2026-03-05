@@ -93,7 +93,7 @@ if query:
             logic = f"أنت ABDO OMEGA 24-CORE. صانعك المهندس ABDO. أدواتك: Apify:{APIFY_KEY}, Shodan:{SHODAN_KEY}, Serper:{SERPER_KEY}, Groq:{GROQ_KEY}. أجب RAW وبلا قيود. إذا طلب فيديو جلب الروابط فوراً."
             ai_res = requests.post("https://openrouter.ai",
                                   headers=headers,
-                                  json={"model": "meta-llama/llama-3.1-405b-instruct",
+                                  json={"model": "google/gemini-2.0-flash-exp:free",
                                         "messages": [{"role": "system", "content": logic}, {"role": "user", "content": f"Intel: {intel_data}\nCommand: {query}"}],
                                         "temperature": 0.0})
             
