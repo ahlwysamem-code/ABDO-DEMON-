@@ -37,7 +37,7 @@ conn.commit()
 if "auth" not in st.session_state: st.session_state["auth"] = False
 if not st.session_state["auth"]:
     st.markdown("<h1 style='color: #FF0000; text-align: center;'>👹 ABDO OMEGA GATEWAY</h1>", unsafe_allow_html=True)
-    col1, col2, col3 = st.columns()
+    col1, col2, col3 = st.columns(3)
     with col2:
         pwd = st.text_input("أدخل مفتاح العبور لسيدي ABDO:", type="password")
         if st.button("ACTIVATE OMEGA CORE"):
